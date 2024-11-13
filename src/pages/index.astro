@@ -11,7 +11,11 @@ import Card from "../components/Card.astro";
 		>
 			<div class="h-screen flex items-center justify-center">
 				<div class="bg-white p-6 w-150 h-auto shadow-lg rounded-lg">
-					<div class="bg-white w-96 float-right">
+					<div class="bg-white w-[31rem] float-right relative">
+						<img src="top.png" class="absolute w-full top-0 left-0 z-5"/>
+						<img src="bottom.png" class="absolute w-full bottom-0 left-0 z-5"/>
+						<img src="between.png" class="absolute w-full -translate-y-1/2 top-1/2 h-[calc(101.5%-233.5px-241.34px)] z-0"/>
+						<div class="w-80 mx-auto mt-36 mb-40 py-2">
 						<h1 class="text-3x1 font-bold text-center text-gray-500 mb-4">
 							Warcraft III: Reforged
 						</h1>
@@ -31,9 +35,8 @@ import Card from "../components/Card.astro";
 						</div>
 						<div class="flex" >
 							<div class="w-45 mr-4">Publisher(s)</div> <div class="w-full">    lizzard Entertainment]</div>
-
-
-						</div><div class="flex" >
+						</div>
+							<div class="flex" >
 							<div class="w-45 mr-4">Producer(s))</div> <div class="w-full">    Pete Stillwell[2]</div>
 
 
@@ -69,6 +72,8 @@ import Card from "../components/Card.astro";
 
 
 					</div>
+
+						</div>
 					</div>
 					<h1
 						class="text-2xl font-bold text-center text-gray-700 mb-4"
