@@ -4,14 +4,36 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+	<body>
+		<header class="bg-blue-600 text-white py-4">
+			<div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+				<!-- Логотип -->
+				<div class="text-2xl font-bold">
+					<a href="/" class="text-white">Warcraft 3</a>
+				</div>
+	
+				<!-- Меню + ссылка на источник -->
+				<nav>
+					<ul class="flex space-x-6">
+						<li><a href="/" class="hover:text-gray-300 transition">Главная</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos" class="hover:text-gray-300 transition">Warcraft3 reforget wiki</a></li>
+
+
+					</ul>
+				</nav>
+				</div>
+			</div>
+		</header>
+	</body>
 	<main>
+
 		<div
 			class="bg-no-repeat bg-cover bg-center h-screen"
 			style="background-image: url('https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt42222a015642b85c/60d38b7ca13cde67981b0c1e/25857-1.png?imwidth=520&imdensity=2.625');"
 		>
 			<div class="h-screen flex items-center justify-center">
 				<div class="bg-white p-6 w-150 h-auto shadow-lg rounded-lg">
-					<div class="bg-white w-[31rem] float-right relative">
+					<div class="bg-white w-[31rem] float-right relative">	
 						<img src="top.png" class="absolute w-full top-0 left-0 z-5"/>
 						<img src="bottom.png" class="absolute w-full bottom-0 left-0 z-5"/>
 						<img src="between.png" class="absolute w-full -translate-y-1/2 top-1/2 h-[calc(101.5%-233.5px-241.34px)] z-0"/>
