@@ -1,0 +1,37 @@
+
+<div class="fixed bottom-20 right-20">
+<button id="up" class="group relative focus:outline-none focus:ring transition-opacity duration-750 opacity-0 hidden">
+  <span
+    class="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-yellow-300 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
+  ></span>
+  <span
+    class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest text-black group-active:text-opacity-75"
+  >
+    CLICK
+  </span>
+</button>
+
+</div>
+
+<script>
+  const up = document.getElementById('up')
+  const audio = new Audio("/death.mp3");
+  up.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+  document.addEventListener('scroll', (e) => {
+    const pos = window.scrollY;
+    if(pos === 0) {
+      up.style.opacity = 0;
+      audio.play();
+      setTimeout(()=> {
+        up.style.display = 'none';
+      }, 750)
+    }
+    else {
+      up.style.opacity = 100;
+      up.style.display = 'inline-block';
+    }
+    console.log(window.scrollY)
+  })
+</script>

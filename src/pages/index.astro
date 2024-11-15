@@ -1,30 +1,118 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import ScrollUp from "../components/ScrollUp.astro";
+
+
+const api = {
+		title: 'Warcraft III: Reforged',
+	card: {
+		title: 'Warcraft III: Reforged',
+		table: [
+			{
+				q: 'Developer(s)',
+				a: `Blizzard Entertainment, Lemon Sky Studios[1]`
+			},
+			{
+				q: 'Developer(s)',
+				a: `Blizzard Entertainment, Lemon Sky Studios[1]`
+			},
+			{
+				q: 'Developer(s)',
+				a: `Blizzard Entertainment, Lemon Sky Studios[1]`
+			},
+			{
+				q: 'Developer(s)',
+				a: `Blizzard Entertainment, Lemon Sky Studios[1]`
+			},
+			{
+				q: 'Publisher(s)',
+				a: 'Blizzard Entertainment'
+			}
+		]
+	},
+	body: [
+		{
+			type: 'p',
+			content: `Warcraft III: Reforged — это обновленное издание игры.
+						Стратегическая видеоигра в реальном времени 2002 года Warcraft III: Reign
+						Хаоса и его расширения «Ледяной Трон».`
+		},
+		{
+			type: 'p',
+			content: `Выпущенный 28 января 2020 года, он добавляет обновленную графику,
+						новые настройки игрового процесса кампании, а также современный онлайн Battle.net
+						функции.`
+		},
+		{
+		type: 'p',
+			content: `Игра получила неоднозначные отзывы критиков и подавляющее большинство
+						негативный прием со стороны игроков из-за его изменений по сравнению с
+						оригинальность, отсутствие многих заявленных функций и техническая
+						проблемы.`
+		} ,
+		{
+			type: 'h1',
+			content: `Геймплей`
+		},
+		{
+			type: 'p',
+			content: `Этот раздел необходимо обновить. Пожалуйста, помогите обновить
+						эта статья отражает недавние события или недавно появившиеся
+						информация. (февраль 2020 г.)`
+		},
+		{
+				type: 'p',
+				content: `Reforged сохраняет геймплей оригинала, но его развитие
+						стимулировал дальнейшие изменения баланса в многопользовательской игре.`
+			},
+		
+		{
+			type: 'p',
+			content: `Игроки из оригинального клиента могут
+						получить доступ к игрокам Reforged и играть с ними, получив
+						доступ к новому клиенту (после приобретения им
+						продукт).`
+		},
+		{
+			type: 'p',
+			content: `Есть настройка классической графики.
+						доступен без покупки для владельцев классической версии
+						лицензия. Подобно StarCraft: Remastered, здесь используется
+						текстуры оригинального релиза.`
+		},
+		{
+			type: 'p',
+			content: `Пользователи могут разблокировать
+						значки профиля на основе рейтингов для каждой расы. Миссии кампании
+						были визуально обновлены, чтобы отразить World of Warcraft, однако
+						карта Азерота и внешний вид героев остались сохранены
+						ближе к оригинальным концепциям Warcraft III, чем к тем,
+						появляется в WoW.`
+		} ,
+		{
+			type: 'p',
+			content: `Более того, есть определенные особенности
+						отсутствуют в Reforged, такие как соревновательная лестница, классика
+						анимированные фоны и возможность сохранения повтора. Некоторые из них
+						Ожидается, что они будут добавлены в следующих патчах.`
+		},
+		{
+			type: 'p',
+			content: `Однако
+						некоторые не были включены, например, социальная система «Кланы»,
+						о котором Blizzard не упомянула. Кампания сейчас
+						имеет три уровня сложности, один из них — «история».
+						режим», ориентированный на новичков.`
+		} ,
+	]
+	
+}
 ---
 
-<Layout title="Welcome to Astro.">
-	<body>
-		<header class="bg-blue-600 text-white py-4">
-			<div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-				<!-- Логотип -->
-				<div class="text-2xl font-bold">
-					<a href="/" class="text-white">Warcraft 3</a>
-				</div>
-	
-				<!-- Меню + ссылка на источник -->
-				<nav>
-					<ul class="flex space-x-6">
-						<li><a href="/" class="hover:text-gray-300 transition">Главная</a></li>
-						<li><a href="https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos" class="hover:text-gray-300 transition">Warcraft3 reforget wiki</a></li>
-
-
-					</ul>
-				</nav>
-				</div>
-			</div>
-		</header>
-	</body>
+<Layout title={api.title}>
+	<Header />
 	<main>
 
 		<div
@@ -33,117 +121,28 @@ import Card from "../components/Card.astro";
 		>
 			<div class="h-screen flex items-center justify-center">
 				<div class="bg-white p-6 w-150 h-auto shadow-lg rounded-lg">
-					<div class="bg-white w-[31rem] float-right relative">	
-						<img src="top.png" class="absolute w-full top-0 left-0 z-5"/>
-						<img src="bottom.png" class="absolute w-full bottom-0 left-0 z-5"/>
-						<img src="between.png" class="absolute w-full -translate-y-1/2 top-1/2 h-[calc(101.5%-233.5px-241.34px)] z-0"/>
-						<div class="w-80 mx-auto mt-36 mb-40 py-2">
-						<h1 class="text-3x1 font-bold text-center text-gray-500 mb-4">
-							Warcraft III: Reforged
-						</h1>
-						<div class="flex justify-center">
-							<a
-								href="https://en.wikipedia.org/wiki/File:Warcraft_III_Reforged_Logo.png"
-							>
-								<img
-									src="https://upload.wikimedia.org/wikipedia/en/4/4f/Warcraft_III_Reforged_Logo.png?20191125000449"
-								/>
-							</a>
-						</div>
-					    <div class="flex" >
-							<div class="w-45 mr-4">Developer(s)</div> <div class="w-full">     Blizzard Entertainment <br>Lemon Sky Studios[1]</div>
-
-
-						</div>
-						<div class="flex" >
-							<div class="w-45 mr-4">Publisher(s)</div> <div class="w-full">    lizzard Entertainment]</div>
-						</div>
-							<div class="flex" >
-							<div class="w-45 mr-4">Producer(s))</div> <div class="w-full">    Pete Stillwell[2]</div>
-
-
-						</div>
-					<div class="flex" >
-						<div class="w-45 mr-4">Designer(s)</div> <div class="w-full">    Matt Morris[3]</div>
-
-
-					</div>
-					<div class="flex" >
-						<div class="w-45 mr-4">Series</div> <div class="w-full">      Warcraft</div>
-
-
-					</div>
-					<div class="flex" >
-						<div class="w-45 mr-4">Platform(s)</div> <div class="w-full">     Microsoft Windows</div>
-
-
-					</div>
-					<div class="flex" >
-						<div class="w-45 mr-4">Release</div> <div class="w-full">     <details>
-							<summary></summary>
-							January 28, 2020
-						</details></div>
-
-
-					</div><div class="flex" >
-						<div class="w-45 mr-4">Genre(s)</div> <div class="w-full">     Real-time strategy</div>
-
-
-					</div><div class="flex" >
-						<div class="w-45 mr-4">Mode(s)</div> <div class="w-full">     Microsoft Windows</div>
-
-
-					</div>
-
-						</div>
-					</div>
+					<Card title={api.card.title} table={api.card.table}  />
 					<h1
 						class="text-2xl font-bold text-center text-gray-700 mb-4"
 					>
-						Warcraft III: Reforged
+						{api.title}
 					</h1>
-					<p class="text-lg text-gray-500">
-						Warcraft III: Reforged — это обновленное издание игры.
-						Стратегическая видеоигра в реальном времени 2002 года Warcraft III: Reign
-						Хаоса и его расширения «Ледяной Трон». <br />
-						Выпущенный 28 января 2020 года, он добавляет обновленную графику,
-						новые настройки игрового процесса кампании, а также современный онлайн Battle.net
-						функции. <br />
-						Игра получила неоднозначные отзывы критиков и подавляющее большинство
-						негативный прием со стороны игроков из-за его изменений по сравнению с
-						оригинальность, отсутствие многих заявленных функций и техническая
-						проблемы.<br>
+					<div class="text-lg text-gray-500">
 
-						Геймплей<br />
+					{api.body.map((elem) => {
 
-						Этот раздел необходимо обновить. Пожалуйста, помогите обновить
-						эта статья отражает недавние события или недавно появившиеся
-						информация. (февраль 2020 г.)<br />
-						Reforged сохраняет геймплей оригинала, но его развитие
-						стимулировал дальнейшие изменения баланса в многопользовательской игре.
-						<br />Игроки из оригинального клиента могут
-						получить доступ к игрокам Reforged и играть с ними, получив
-						доступ к новому клиенту (после приобретения им
-						продукт). <br />Есть настройка классической графики.
-						доступен без покупки для владельцев классической версии
-						лицензия. Подобно StarCraft: Remastered, здесь используется
-						текстуры оригинального релиза.<br /> Пользователи могут разблокировать
-						значки профиля на основе рейтингов для каждой расы. Миссии кампании
-						были визуально обновлены, чтобы отразить World of Warcraft, однако
-						карта Азерота и внешний вид героев остались сохранены
-						ближе к оригинальным концепциям Warcraft III, чем к тем,
-						появляется в WoW.<br /> Более того, есть определенные особенности
-						отсутствуют в Reforged, такие как соревновательная лестница, классика
-						анимированные фоны и возможность сохранения повтора. Некоторые из них
-						Ожидается, что они будут добавлены в следующих патчах.<br /> Однако
-						некоторые не были включены, например, социальная система «Кланы»,
-						о котором Blizzard не упомянула. Кампания сейчас
-						имеет три уровня сложности, один из них — «история».
-						режим», ориентированный на новичков.
+						if(elem.type === 'p'){
+							return <p class="mb-4">{elem.content}</p>
+						}
+						if(elem.type === 'h1'){
+							return <h1 class="mb-4 text-2xl border-b border-b-black">{elem.content}</h1>
+						}
+					})}
 
-					</p>
+					</div>
 				</div>
 			</div>
+		<ScrollUp />
 			
 		</div>
 	</main>

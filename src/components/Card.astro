@@ -1,87 +1,35 @@
 ---
 interface Props {
 	title: string;
-	body: string;
-	href: string;
+	table:{
+		q: string,
+		a: string
+	}[]
 }
 
-const { href, title, body } = Astro.props;
+const { title, table } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-	header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-</style>
+					<div class="bg-white w-[31rem] float-right relative">	
+						<img src="top.png" class="absolute w-full top-0 left-0 z-5"/>
+						<img src="bottom.png" class="absolute w-full bottom-0 left-0 z-5"/>
+						<img src="between.png" class="absolute w-full -translate-y-1/2 top-1/2 h-[calc(101.5%-233.5px-241.34px)] z-0"/>
+						<div class="w-80 mx-auto mt-36 mb-40 py-2">
+						<h1 class="text-3x1 font-bold text-center text-gray-500 mb-4">
+							{title}
+						</h1>
+						<div class="flex justify-center">
+							<a
+								href="https://en.wikipedia.org/wiki/File:Warcraft_III_Reforged_Logo.png"
+							>
+								<img
+									src="https://upload.wikimedia.org/wikipedia/en/4/4f/Warcraft_III_Reforged_Logo.png?20191125000449"
+								/>
+							</a>
+						</div>
+	{table.map((t)=> <div class="flex" >
+								<div class="w-45 mr-4">{t.q}</div> <div class="w-full">     {t.a}</div>
+							</div>
+	)}
+						</div>
+					</div>
